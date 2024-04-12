@@ -13,12 +13,10 @@ class ItemsActivity2 : AppCompatActivity() {
         val itemsList: RecyclerView = findViewById(R.id.itemsList2)
         val items = arrayListOf<Item>()
 
-        // Добавьте товары для второй страницы
         items.add(Item(4, "logitech", "Игровая клавиатура Logitech", "Logitech G413",
             "Игровая клавиатура Logitech G413 Carbon - это мощный инструмент для вашей игровой сессии. " +
                     "Она предлагает высокую производительность и удобное использование.", 5999))
 
-        // Настройте RecyclerView
         itemsList.layoutManager = LinearLayoutManager(this)
         itemsList.adapter = ItemsAdapter(items, this)
     }

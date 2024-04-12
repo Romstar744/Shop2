@@ -9,16 +9,20 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.starostin.shop2.CartManager
+import com.starostin.shop2.Item
+import com.starostin.shop2.ItemActivity
+import com.starostin.shop2.R
 
+class ItemsAdapter(private val items: List<Item>, private val context: Context) : RecyclerView.Adapter<ItemsAdapter.MyViewHolder>() {
 
-class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.Adapter<ItemsAdapter.MyViewHolder>() {
-
-    class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val image: ImageView = view.findViewById(R.id.item_list_image)
         val title: TextView = view.findViewById(R.id.item_list_title)
         val desc: TextView = view.findViewById(R.id.item_list_desc)
         val price: TextView = view.findViewById(R.id.item_list_price)
-        val btn: Button = view.findViewById(R.id.item_list_button)
+        val viewButton: Button = view.findViewById(R.id.item_list_button)
+        val buyButton: Button = view.findViewById(R.id.item_list_buy_button)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -27,31 +31,32 @@ class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.A
     }
 
     override fun getItemCount(): Int {
-        return items.count()
+        return items.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.title.text = items[position].title
-        holder.desc.text = items[position].desc
-        holder.price.text = items[position].price.toString() + "₽"
+        val currentItem = items[position]
+
+        holder.title.text = currentItem.title
+        holder.desc.text = currentItem.desc
+        holder.price.text = "${currentItem.price}₽"
 
         val imageId = context.resources.getIdentifier(
-            items[position].image,
+            currentItem.image,
             "drawable",
             context.packageName
         )
-
         holder.image.setImageResource(imageId)
 
-        holder.btn.setOnClickListener {
+        holder.viewButton.setOnClickListener {
             val intent = Intent(context, ItemActivity::class.java)
-
-            intent.putExtra("itemTitle", items[position].title)
-            intent.putExtra("itemText", items[position].text)
-
+            intent.putExtra("itemTitle", currentItem.title)
+            intent.putExtra("itemText", currentItem.text)
             context.startActivity(intent)
         }
+
+        holder.buyButton.setOnClickListener {
+            CartManager.addToCart(currentItem)
+        }
     }
-
-
 }
