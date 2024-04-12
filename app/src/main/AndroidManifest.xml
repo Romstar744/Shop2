@@ -29,6 +29,8 @@
             android:exported="false"/>
         <activity android:name=".ItemsActivity3"
             android:exported="false"/>
+        <activity android:name=".CategorySelectionActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
