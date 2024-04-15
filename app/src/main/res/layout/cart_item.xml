@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:background="#e2a600"
     android:padding="16dp">
 
     <TextView
@@ -23,7 +24,6 @@
         android:text="Price"
         android:textSize="16sp"
         android:layout_gravity="center_vertical"/>
-
 </LinearLayout>
 
 
