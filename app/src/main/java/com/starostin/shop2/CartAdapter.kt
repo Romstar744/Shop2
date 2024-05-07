@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 class CartAdapter(private val cartItems: MutableList<Item>) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
     inner class CartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val itemNameTextView: TextView = itemView.findViewById(R.id.itemNameTextView)
-        val itemPriceTextView: TextView = itemView.findViewById(R.id.itemPriceTextView)
+        val itemNameTextView: TextView = itemView.findViewById(R.id.cart_item_title)
+        val itemPriceTextView: TextView = itemView.findViewById(R.id.cart_item_price)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_in_cart, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.cart_item, parent, false)
         return CartViewHolder(itemView)
     }
 
