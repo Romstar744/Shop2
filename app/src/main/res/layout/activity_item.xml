@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#e2a600"
+    android:background="@drawable/gradient_background"
     tools:context=".ItemActivity">
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:backgroundTint="#8A2700"
+        android:backgroundTint="#F44336"
         android:text="Назад" />
 
 </LinearLayout>
