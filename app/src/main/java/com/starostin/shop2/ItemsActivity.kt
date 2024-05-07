@@ -1,7 +1,11 @@
 package com.starostin.shop2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -10,14 +14,18 @@ class ItemsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_items)
 
-
-        /*val categories = arrayListOf<Category>(
-            Category(1, "Категория 1"),
-            Category(2, "Категория 2"),
-            Category(3, "Категория 3")
-        )*/
         val itemsList: RecyclerView = findViewById(R.id.itemsList)
         val items = arrayListOf<Item>()
+        val back: ImageView = findViewById(R.id.back)
+        val basket: ImageView = findViewById(R.id.basket)
+
+        back.setOnClickListener {
+            finish()
+        }
+        basket.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
 
 
 

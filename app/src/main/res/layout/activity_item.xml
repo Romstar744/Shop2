@@ -33,6 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#8A2700"
-        android:text="Купить" />
+        android:text="Назад" />
 
 </LinearLayout>
