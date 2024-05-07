@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 
 class CategorySelectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,8 @@ class CategorySelectionActivity : AppCompatActivity() {
         val buttonCategory2: Button = findViewById(R.id.buttonCategory2)
         val buttonCategory3: Button = findViewById(R.id.buttonCategory3)
         val buttonCart: ImageView = findViewById(R.id.buttonCart)
+        val buttonAuth: ImageView = findViewById(R.id.link_to_auth)
+
 
         buttonCategory1.setOnClickListener {
             val intent = Intent(this, ItemsActivity::class.java)
@@ -36,6 +39,10 @@ class CategorySelectionActivity : AppCompatActivity() {
 
         buttonCart.setOnClickListener {
             val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
+        buttonAuth.setOnClickListener {
+            val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
         }
     }

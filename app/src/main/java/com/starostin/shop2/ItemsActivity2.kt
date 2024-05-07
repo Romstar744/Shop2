@@ -25,9 +25,18 @@ class ItemsActivity2 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        items.add(Item(4, "carbon", "Игровая клавиатура Logitech", "Logitech G413",
+        items.add(Item(1, "carbon", "Игровая клавиатура Logitech", "Logitech G413",
             "Игровая клавиатура Logitech G413 Carbon - это мощный инструмент для вашей игровой сессии. " +
                     "Она предлагает высокую производительность и удобное использование.", 5999))
+
+        items.add(Item(2, "blackwidow", "Игровая клавиатура Razer", "Razer BlackWidow Elite",
+            "Игровая клавиатура Razer BlackWidow Elite предоставляет широкий выбор механических клавиш и " +
+                    "индивидуальную подсветку для настройки вашего игрового опыта.", 8999))
+
+        items.add(Item(3, "apex", "Игровая клавиатура SteelSeries", "SteelSeries Apex Pro",
+            "Игровая клавиатура SteelSeries Apex Pro имеет уникальную систему регулировки механических клавиш, " +
+                    "позволяя вам настраивать силу нажатия для оптимального контроля в играх.", 10999))
+
 
         itemsList.layoutManager = LinearLayoutManager(this)
         itemsList.adapter = ItemsAdapter(items, this)

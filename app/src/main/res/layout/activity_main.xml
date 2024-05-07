@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#201E28"
+    android:background="@drawable/gradient_background2"
     tools:context=".MainActivity">
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="text"
-        android:textColorHint="#6a6a6a"
+        android:textColorHint="#E9939393"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:textColor="#fdfdfd"
@@ -37,7 +37,7 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:textColorHint="#6a6a6a"
+        android:textColorHint="#E9939393"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:textColor="#fdfdfd"
@@ -49,10 +49,10 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColorHint="#6a6a6a"
+        android:textColorHint="#E9939393"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:textColor="#fdfdfd"
+        android:textColor="#FDFDFD"
         android:hint="Введите пароль" />
 
     <Button
