@@ -17,6 +17,7 @@ class CategorySelectionActivity : AppCompatActivity() {
         val buttonCategory3: Button = findViewById(R.id.buttonCategory3)
         val buttonCart: ImageView = findViewById(R.id.buttonCart)
         val buttonAuth: ImageView = findViewById(R.id.link_to_auth)
+        val buttonReview: TextView = findViewById(R.id.link_to_review)
 
 
         buttonCategory1.setOnClickListener {
@@ -43,6 +44,10 @@ class CategorySelectionActivity : AppCompatActivity() {
         }
         buttonAuth.setOnClickListener {
             val intent = Intent(this, AuthActivity::class.java)
+            startActivity(intent)
+        }
+        buttonReview.setOnClickListener {
+            val intent = Intent(this, FeedbackActivity::class.java)
             startActivity(intent)
         }
     }

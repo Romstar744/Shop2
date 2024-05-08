@@ -31,6 +31,8 @@
             android:exported="false"/>
         <activity android:name=".CategorySelectionActivity"
             android:exported="false"/>
+        <activity android:name=".FeedbackActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
