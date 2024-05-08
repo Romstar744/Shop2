@@ -55,7 +55,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="#8A2700"
+            android:backgroundTint="#F44336"
             android:text="Посмотреть" />
 
         <Button
@@ -63,7 +63,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="#3C9D0A"
+            android:backgroundTint="#8BC34A"
             android:text="Купить" />
 
     </LinearLayout>
