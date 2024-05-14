@@ -43,8 +43,7 @@ class CategorySelectionActivity : AppCompatActivity() {
             startActivity(intent)
         }
         buttonAuth.setOnClickListener {
-            val intent = Intent(this, AuthActivity::class.java)
-            startActivity(intent)
+            finish()
         }
         buttonReview.setOnClickListener {
             val intent = Intent(this, FeedbackActivity::class.java)
