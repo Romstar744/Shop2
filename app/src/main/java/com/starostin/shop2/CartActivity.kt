@@ -32,7 +32,7 @@ class CartActivity : AppCompatActivity() {
         for (item in cartItems) {
             totalPrice += item.price
         }
-        totalPriceTextView.text = "Total: $$totalPrice"
+        totalPriceTextView.text = "Итого: $totalPrice₽"
     }
 }
 

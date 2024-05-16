@@ -15,6 +15,9 @@ object CartManager {
         return cartItems.toList()
     }
 
+    fun saveCartItems(items: List<Item>) {
+    }
+
     fun getTotalPrice(): Int {
         var totalPrice = 0
         for (item in cartItems) {

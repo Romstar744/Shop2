@@ -10,20 +10,18 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cartRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="522dp" />
 
     <TextView
         android:id="@+id/totalPriceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:text="Total: $0.00"
-        android:textSize="18sp"
-        android:textStyle="bold"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp" />
-
-
+        android:layout_marginBottom="16dp"
+        android:text="Итого: 0.00₽"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>

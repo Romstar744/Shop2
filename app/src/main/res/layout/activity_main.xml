@@ -11,13 +11,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_bold"
-        android:textColor="#fdfdfd"
         android:layout_gravity="center"
         android:layout_marginTop="170dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/create_account"
+        android:textColor="#fdfdfd"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:text="Создайте акканунт" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/user_login"
